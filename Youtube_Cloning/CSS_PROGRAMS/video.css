@@ -1,0 +1,158 @@
+.thumbnail {
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media(min-with: 400px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1050px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1050px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video-1 {
+    display: inline-block;
+    width: 280px;
+}
+
+.image {
+    width: 280px;
+}
+
+.video-time {
+    background-color: black;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    padding: 4px;
+    bottom: 8px;
+    right: 5px;
+    border-radius: 2px;
+}
+
+.channel-picture {
+    width: 36px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 42px 230px;
+    margin-top: 10px;
+}
+
+.info-text {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.p-1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.p-2 {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.p-3 {
+    color: gray;
+    font-size: 14px;
+}
+
+.tooltip-video {
+    display: grid;
+    grid-template-columns: 50px 252px;
+    position: relative;
+}
+
+.tool-channel-picture {
+    width: 40px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.tooltip-channel-info {
+    display: inline-block;
+}
+
+.tooltip-p-1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+
+.tooltip-p-2 {
+    color: gray;
+    font-size: 14px;
+}
+
+.first-video-container, .second-video-container,
+.third-video-container, .fourth-video-container,
+.fifth-video-container, .sixth-video-container {
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.first-video-container .tooltip-video,
+.second-video-container .tooltip-video,
+.third-video-container .tooltip-video,
+.fourth-video-container .tooltip-video,
+.fifth-video-container .tooltip-video,
+.sixth-video-container .tooltip-video {
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    bottom: -25px;
+    opacity: 0;
+    background-color: white;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+}
+
+.first-video-container:hover .tooltip-video,
+.second-video-container:hover .tooltip-video,
+.third-video-container:hover .tooltip-video,
+.fourth-video-container:hover .tooltip-video,
+.fifth-video-container:hover .tooltip-video,
+.sixth-video-container:hover .tooltip-video {
+    opacity: 1;
+}
